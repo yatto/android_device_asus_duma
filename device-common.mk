@@ -111,6 +111,14 @@ PRODUCT_PACKAGES += \
     copybit.msm8960 \
     memtrack.msm8960
 
+# renderScript HIDL iterfaces
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
+# RIL HIDL interfaces
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0-impl
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.conf \
