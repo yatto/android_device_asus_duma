@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, vendor/asus/flo/flo-vendor.mk)
+$(call inherit-product-if-exists, vendor/asus/duma/duma-vendor.mk)
 
 # This device is xhdpi.  However the platform doesn't
 # currently contain all of the bitmaps at xhdpi density so
@@ -158,7 +158,7 @@ PRODUCT_PACKAGES += \
 
 # Kickstart
 PRODUCT_COPY_FILES += \
-    device/asus/flo/kickstart_checker.sh:system/bin/kickstart_checker.sh
+    device/asus/duma/kickstart_checker.sh:system/bin/kickstart_checker.sh
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -268,7 +268,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/asus/duma/wifi/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
     device/asus/duma/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-    device/asus/duma/wifi/WCNSS_qcom_wlan_nv_duma.bin:system/etc/wifi/WCNSS_qcom_wlan_nv_deb.bin
+    device/asus/duma/wifi/WCNSS_qcom_wlan_nv_duma.bin:system/etc/wifi/WCNSS_qcom_wlan_nv_duma.bin
 
 # Voice processing
 PRODUCT_PACKAGES += \

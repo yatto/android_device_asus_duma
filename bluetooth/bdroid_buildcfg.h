@@ -17,7 +17,7 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "Nexus 7"
+#define BTM_DEF_LOCAL_NAME   "MeMOPAD 10FHD"
 
 #define SC_MODE_INCLUDED FALSE
 
