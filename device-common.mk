@@ -14,6 +14,16 @@
 # limitations under the License.
 #
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+LOCAL_KERNEL := device/asus/flo/kernel
+else
+LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES := \
+	$(LOCAL_KERNEL):kernel
+
+
 $(call inherit-product-if-exists, vendor/asus/duma/duma-vendor.mk)
 
 # This device is xhdpi.  However the platform doesn't
