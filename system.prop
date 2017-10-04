@@ -42,7 +42,7 @@ dalvik.vm.dex2oat-swap=false
 
 # Graphics
 ro.opengles.version=196608
-ro.sf.lcd_density=320
+ro.sf.lcd_density=240
 debug.hwui.use_buffer_age=false
 
 # Display

@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+
+# Variants
+TARGET_OTA_ASSERT_DEVICE := duma,K005,ME302KL
+
+
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := arm
@@ -29,7 +34,7 @@ BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 # BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=msm8960 maxcpus=2
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=duma user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3
-BOARD_KERNEL_CMDLINE += vmalloc=340M
+BOARD_KERNEL_CMDLINE += vmalloc=340M androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 TARGET_KERNEL_SOURCE := kernel/asus/duma
 TARGET_KERNEL_CONFIG := Glitch_duma_defconfig
@@ -71,12 +76,25 @@ WIFI_DRIVER_FW_PATH_AP  := "ap"
 #BOARD_USES_HGL := true
 #BOARD_USES_OVERLAY := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
 USE_OPENGL_RENDERER := true
 PRESENT_TIME_OFFSET_FROM_VSYNC_NS := 3200000
 TARGET_USES_ION := true
 TARGET_USES_OVERLAY := true
 TARGET_USES_SF_BYPASS := true
 TARGET_USES_C2D_COMPOSITON := true
+
+
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS), linux)
+  ifeq ($(TARGET_BUILD_VARIANT),user)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
+
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216 # 16 MB

@@ -14,9 +14,12 @@
 # limitations under the License.
 #
 
+
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.duma
+
 
 # the actual meat of the device-specific product definition
 $(call inherit-product, device/asus/duma/device-common.mk)

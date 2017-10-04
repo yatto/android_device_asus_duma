@@ -15,7 +15,7 @@
 #
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/asus/flo/kernel
+LOCAL_KERNEL := device/asus/duma/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -96,6 +96,14 @@ PRODUCT_PACKAGES += \
 # Features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+
+# Do not power down SIM card when modem is sent in Low Power Mode.
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.radio.apm_sim_not_pwdn=1
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	rild.libpath=/system/lib/libril-qc-qmi-1.so
+
 # Disable camera Treble path
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_treble=true
@@ -116,6 +124,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     libgenlock \
+	liboverlay \
     hwcomposer.msm8960 \
     gralloc.msm8960 \
     copybit.msm8960 \
