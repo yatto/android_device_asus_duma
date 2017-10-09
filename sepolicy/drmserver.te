@@ -1,0 +1,2 @@
+allow drmserver sysfs:file r_file_perms;
+

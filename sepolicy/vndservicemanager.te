@@ -1,0 +1,2 @@
+allow vndservicemanager sysfs:file r_file_perms;
+
