@@ -1,2 +1,0 @@
-allow shell sysfs:file r_file_perms;
-

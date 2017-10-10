@@ -1,2 +1,0 @@
-allow servicemanager sysfs:file r_file_perms;
-

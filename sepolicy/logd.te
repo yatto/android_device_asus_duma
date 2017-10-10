@@ -1,3 +1,0 @@
-allow logd sysfs:file r_file_perms;
-allow logd unlabeled:dir r_dir_perms;
-

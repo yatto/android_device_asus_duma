@@ -1,2 +1,0 @@
-allow logpersist sysfs:file r_file_perms;
-
