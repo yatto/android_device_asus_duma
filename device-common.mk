@@ -73,7 +73,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	device/asus/duma/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
 	device/asus/duma/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
-	device/asus/duma/WCNSS_qcom_wlan_nv_duma.bin:system/etc/wifi/WCNSS_qcom_wlan_nv_flo.bin \
+	device/asus/duma/WCNSS_qcom_wlan_nv_flo.bin:system/etc/wifi/WCNSS_qcom_wlan_nv_flo.bin \
 	device/asus/duma/WCNSS_qcom_wlan_nv_deb.bin:system/etc/wifi/WCNSS_qcom_wlan_nv_deb.bin \
 	device/asus/duma/init.duma.wifi.sh:system/bin/init.duma.wifi.sh \
 	device/asus/duma/twrp.fstab:recovery/root/etc/twrp.fstab
