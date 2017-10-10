@@ -1,0 +1,2 @@
+allow mediaextractor sysfs:file r_file_perms;
+

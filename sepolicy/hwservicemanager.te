@@ -1,0 +1,2 @@
+allow hwservicemanager sysfs:file r_file_perms;
+
